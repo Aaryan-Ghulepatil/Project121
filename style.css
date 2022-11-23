@@ -1,0 +1,53 @@
+#img1{
+    width:200px;
+}
+
+#img2{
+    width:250px;
+    margin-top:-35px;
+}
+
+
+.test1{
+    background-color: grey;
+    padding:20px;
+    border-radius:6px;
+    margin-bottom:20px;
+    font-family:"roboto",sans-serif;
+}
+
+h5{
+    background-color:white;
+    border-radius:30px;
+    padding:10px;
+    
+}
+
+b{
+    color:purple;
+}
+
+span{
+    color:red;
+}
+
+h4{
+    color:white
+}
+
+li b{
+    color:black;
+}
+
+li img{
+    margin-top:30px;
+    border:3px rgb(255, 44, 44) double;
+}
+
+span h4{
+    color:orange;
+}
+
+span h4 u{
+    font-weight:bold;
+}

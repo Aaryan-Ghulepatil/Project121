@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Case Study- Real Time Image Identification</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
+  <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="main.js"></script>
+</head>
+<body >
+  <div class="container">
+    <center>
+    <div style="margin-top:10px;" class="header container">
+        <img id="img1" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Logo_of_Google_Lens.svg/2560px-Logo_of_Google_Lens.svg.png">
+    <br>
+    <h3>V/S</h3>
+    <br>
+    <img id="img2"src="https://mobilenet.co.nz/assets/img/mobilenet-logo.png">
+    
+    </div>
+    <div class="div_main" >
+      <ol>
+        <div class="col-xs-12 test1 container">
+          <li class="col-sm-4 col-xs-12">
+            <b>Test Image</b>
+            <img class="img-responsive img_1" src="https://images.pexels.com/photos/19090/pexels-photo.jpg?cs=srgb&dl=pexels-web-donut-19090.jpg&fm=jpg">
+          </li>
+
+          <h5 class="col-sm-4 col-xs-12">
+            Output on <b>Google Lens - 
+            <span>Sneakers</span></b>
+          </h5>
+       
+          <h5 class="col-sm-4 col-xs-12">
+            Output on <b>MobileNet -
+            <span> Running shoe</span></b>
+          </h5>
+
+          <div class="miniResult col-xs-12">
+            <h4>Result</h4>
+            <hr>
+            <span><h4><u>MobileNet</u> is more accurate</h4></span>
+          </div>
+
+        </div>
+    
+        <div class="col-xs-12 test1 container">
+          <li class="col-sm-4 col-xs-12">
+            <b>Test Image</b>
+            <img class="img-responsive img_1" src="https://images.unsplash.com/photo-1602143407151-7111542de6e8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8Ym90dGxlfGVufDB8fDB8fA%3D%3D&w=1000&q=80">
+          </li>
+
+          <h5 class="col-sm-4 col-xs-12">
+            Output on <b>Google Lens - 
+            <span>Water Bottle</span></b>
+          </h5>
+          
+          <h5 class="col-sm-4 col-xs-12">
+            Output on <b>MobileNet - 
+            <span>Water bottle</span></b>
+          </h5>
+
+          <div class="miniResult col-xs-12">
+            <h4>Result</h4>
+            <hr>
+            <span><h4><u>Tie</u></h4></span>
+          </div>
+
+        </div>
+
+        <div class="col-xs-12 test1 container">
+          <li class="col-sm-4 col-xs-12">
+            <b>Test Image</b>
+            <img class="img-responsive img_1" src="https://images.prismic.io/frameworkmarketplace/46cbf974-cdff-4cd8-b761-8b4a3343f6c4_FW-chromebook-homepage-carousel.png?auto=compress,format">
+          </li>
+
+          <h5 class="col-sm-4 col-xs-12">
+            Output on <b>Google Lens - 
+            <span>Framework laptop</span></b>
+          </h5>
+          
+          <h5 class="col-sm-4 col-xs-12">
+            Output on <b>MobileNet - 
+            <span>Notebook computer</span></b>
+          </h5>
+
+          <div class="miniResult col-xs-12">
+            <h4>Result</h4>
+            <hr>
+            <span><h4><u>Google Lens</u> is more accurate</h4></span>
+          </div>
+
+        </div>
+     
+        <div class="col-xs-12 test1 container">
+          <li class="col-sm-4 col-xs-12">
+            <b>Test Image</b>
+            <img class="img-responsive img_1" src="https://media.istockphoto.com/id/1289661784/photo/white-wall-clock-on-blue-background.jpg?b=1&s=170667a&w=0&k=20&c=ehvRfDMnbuDDi8bWdgN7kxEptfbBtJTFfw0L00YeuLE=">
+          </li>
+
+          <h5 class="col-sm-4 col-xs-12">
+            Output on <b>Google Lens - 
+            <span>Wall Clock</span></b>
+          </h5>
+         
+          <h5 class="col-sm-4 col-xs-12">
+            Output on <b>MobileNet - 
+            <span>Analog clock</span></b>
+          </h5>
+
+          <div class="miniResult col-xs-12">
+            <h4>Result</h4>
+            <hr>
+            <span><h4><u>Tie</u></h4></span>
+          </div>
+
+        </div>
+      
+        <div class="col-xs-12 test1 container">
+          <li class="col-sm-4 col-xs-12">
+            <b>Test Image</b>
+            <img class="img-responsive img_1" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Tour_Eiffel_Wikimedia_Commons_%28cropped%29.jpg/640px-Tour_Eiffel_Wikimedia_Commons_%28cropped%29.jpg">
+          </li>
+
+          <h5 class="col-sm-4 col-xs-12">
+            Output on <b>Google Lens - 
+            <span>Eiffel Tower</span></b>
+          </h5>
+      
+          <h5 class="col-sm-4 col-xs-12">
+            Output on <b>MobileNet - 
+            <span>Crane</span></b>
+          </h5>
+
+          <div class="miniResult col-xs-12">
+            <h4>Result</h4>
+            <hr>
+            <span><h4><u>Google Lens</u> is more accurate</h4></span>
+          </div>
+
+        </div>
+     
+        <div class="col-xs-12 test1 container">
+          <li class="col-sm-4 col-xs-12">
+            <b>Test Image</b>
+            <img class="img-responsive img_1" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQA6aSa7tXiy3wa6US0-H_i6L91YkybvoRoZQ&usqp=CAU">
+          </li>
+
+          <h5 class="col-sm-4 col-xs-12">
+            Output on <b>Google Lens - 
+            <span>Statue of Unity</span></b>
+          </h5>
+      
+          <h5 class="col-sm-4 col-xs-12">
+            Output on <b>MobileNet - 
+            <span>Statue</span></b>
+          </h5>
+
+          <div class="miniResult col-xs-12">
+            <h4>Result</h4>
+            <hr>
+            <span><h4><u>Google Lens</u> is more accurate</h4></span>
+          </div>
+
+        </div>
+     
+        <div class="col-xs-12 test1 container">
+          <li class="col-sm-4 col-xs-12">
+            <b>Test Image</b>
+            <img class="img-responsive img_1" src="https://cdn.britannica.com/84/4284-050-16C7E8C2/Photograph-Jupiter-range-Voyager-1-cloud-bands-February-1-1979.jpg">
+          </li>
+
+          <h5 class="col-sm-4 col-xs-12">
+            Output on <b>Google Lens - 
+            <span>Jupiter 2009</span></b>
+          </h5>
+          
+          <h5 class="col-sm-4 col-xs-12">
+            Output on <b>MobileNet - 
+            <span>Spot</span></b>
+          </h5>
+
+          <div class="miniResult col-xs-12">
+            <h4>Result</h4>
+            <hr>
+            <span><h4><u>Google Lens</u> is more accurate</h4></span>
+          </div>
+
+        </div>
+      
+        <div class="col-xs-12 test1 container">
+          <li class="col-sm-4 col-xs-12">
+            <b>Test Image</b>
+            <img class="img-responsive img_1" src="download.jpg">
+          </li>
+
+          <h5 class="col-sm-4 col-xs-12">
+            Output on <b>Google Lens - 
+            <span>Racer Bike</span></b>
+          </h5>
+         
+          <h5 class="col-sm-4 col-xs-12">
+            Output on <b>MobileNet - 
+            <span>Moped</span></b>
+          </h5>
+
+          <div class="miniResult col-xs-12">
+            <h4>Result</h4>
+            <hr>
+            <span><h4><u>Google Lens</u> is more accurate</h4></span>
+          </div>
+
+        </div>
+      
+        <div class="col-xs-12 test1 container">
+          <li class="col-sm-4 col-xs-12">
+            <b>Test Image</b>
+            <img class="img-responsive img_1" src="https://www.pngfind.com/pngs/m/250-2508013_bicycle-png-image-transparent-background-transparent-background-bicycle.png">
+          </li>
+
+          <h5 class="col-sm-4 col-xs-12">
+            Output on <b>Google Lens - 
+            <span>Bicycle</span></b>
+          </h5>
+         
+          <h5 class="col-sm-4 col-xs-12">
+            Output on <b>MobileNet - 
+            <span>Mountain bike</span></b>
+          </h5>
+
+          <div class="miniResult col-xs-12">
+            <h4>Result</h4>
+            <hr>
+            <span><h4><u>Tie</u></h4></span>
+          </div>
+
+        </div>
+     
+        <div class="col-xs-12 test1 container">
+          <li class="col-sm-4 col-xs-12">
+            <b>Test Image</b>
+            <img class="img-responsive img_1" src="https://cdn.kastatic.org/ka-perseus-images/a79b0ada35d989ee1937f865c2216ce50a1b1b33.jpg">
+          </li>
+
+          <h5 class="col-sm-4 col-xs-12">
+            Output on <b>Google Lens - 
+            <span>Taj Mahal</span></b>
+          </h5>
+
+          <h5 class="col-sm-4 col-xs-12">
+            Output on <b>MobileNet - 
+            <span>Mosque</span></b>
+          </h5>
+
+          <div class="miniResult col-xs-12">
+            <h4>Result</h4>
+            <hr>
+            <span><h4><u>Google Lens</u> is more accurate</h4></span>
+          </div>
+
+        </div>
+      </ol>
+
+    </div>
+    </center>
+  </div>
+</body>
+</html>
